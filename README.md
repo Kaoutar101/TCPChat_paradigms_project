@@ -1,6 +1,4 @@
 # TCPChat
-<<<<<<< HEAD
-=======
 
 A real-time multi-client chat application built in Java using TCP sockets. The project consists of two Maven applications: a server and a client, both with JavaFX graphical interfaces.
 
@@ -121,4 +119,3 @@ server.port=5000
 ```bash
 mvn javafx:run -Djavafx.args="192.168.1.10 5000"
 ```
->>>>>>> a3cfaeb44669b5e3352f4a5443f0fa00634bede5
