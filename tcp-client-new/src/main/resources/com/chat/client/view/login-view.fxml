@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.chat.client.view.LoginController"
+      stylesheets="@/css/client.css"
+      alignment="CENTER"
+      spacing="20"
+      style="-fx-background-color: #1e1e2e; -fx-padding: 60;">
+
+    <Label text="TCPChat"
+           style="-fx-text-fill: #cdd6f4; -fx-font-size: 32px; -fx-font-weight: bold;"/>
+
+    <Label text="Enter your username to join"
+           style="-fx-text-fill: #a6adc8; -fx-font-size: 14px;"/>
+
+    <TextField fx:id="usernameField"
+               promptText="Username (leave empty for read-only)"
+               maxWidth="300"
+               style="-fx-background-color: #313244; -fx-text-fill: #cdd6f4;
+                      -fx-prompt-text-fill: #6c7086; -fx-padding: 10;
+                      -fx-background-radius: 8; -fx-font-size: 14px;"/>
+
+    <Button fx:id="connectButton"
+            text="Connect"
+            maxWidth="300"
+            onAction="#handleConnect"
+            style="-fx-background-color: #89b4fa; -fx-text-fill: #1e1e2e;
+                   -fx-font-weight: bold; -fx-padding: 10;
+                   -fx-background-radius: 8; -fx-font-size: 14px; -fx-cursor: hand;"/>
+
+    <Label text="Leave username empty to join in read-only mode"
+           style="-fx-text-fill: #6c7086; -fx-font-size: 11px;"/>
+
+</VBox>

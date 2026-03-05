@@ -1,0 +1,26 @@
+.text-area .content {
+    -fx-background-color: #181825;
+}
+
+.text-area {
+    -fx-background-color: #181825;
+    -fx-text-fill: #cdd6f4;
+    -fx-border-color: #313244;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+
+.scroll-pane {
+    -fx-background-color: #181825;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #181825;
+}
+.text-field {
+    -fx-text-fill: #cdd6f4;
+}
+
+.text-field .text {
+    -fx-fill: #cdd6f4;
+}

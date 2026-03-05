@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.chat.client.view.ChatController"
+      spacing="10"
+      stylesheets="@/css/client.css"
+      style="-fx-background-color: #1e1e2e; -fx-padding: 15;">
+
+    <!-- Top status bar -->
+    <HBox alignment="CENTER_LEFT" spacing="8"
+          style="-fx-background-color: #313244; -fx-padding: 10;
+                 -fx-background-radius: 8;">
+        <Circle fx:id="statusCircle" radius="7" fill="#a6e3a1"/>
+        <Label fx:id="statusLabel" text="Online"
+               style="-fx-text-fill: #a6e3a1; -fx-font-weight: bold;"/>
+        <Label text="  |  TCPChat"
+               style="-fx-text-fill: #6c7086;"/>
+    </HBox>
+
+    <!-- Chat messages area -->
+    <TextArea fx:id="chatArea"
+              editable="false"
+              VBox.vgrow="ALWAYS"
+              wrapText="true"
+              style="-fx-background-color: #181825; -fx-text-fill: #cdd6f4;
+                     -fx-font-size: 13px; -fx-background-radius: 8;
+                     -fx-border-color: #313244; -fx-border-radius: 8;"/>
+
+    <!-- Bottom input bar -->
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="messageField"
+                   promptText="Type a message..."
+                   HBox.hgrow="ALWAYS"
+                   onKeyPressed="#handleEnterKey"
+                   style="-fx-background-color: #313244; -fx-text-fill: #cdd6f4;
+                          -fx-prompt-text-fill: #6c7086; -fx-padding: 10;
+                          -fx-background-radius: 8; -fx-font-size: 13px;"/>
+        <Button fx:id="sendButton"
+                text="Send"
+                onAction="#handleSend"
+                style="-fx-background-color: #89b4fa; -fx-text-fill: #1e1e2e;
+                       -fx-font-weight: bold; -fx-padding: 10 20;
+                       -fx-background-radius: 8; -fx-cursor: hand;"/>
+    </HBox>
+
+</VBox>
